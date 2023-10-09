@@ -1,6 +1,3 @@
-# my1stdummypage
-🤷🏻‍♂️
-<br>
 <!DOCTYPE HTML>
 <html lan="en> 
 <head>

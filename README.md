@@ -1,5 +1,6 @@
 # my1stdummypage
 🤷🏻‍♂️
+<br>
 <!DOCTYPE HTML>
 <html lan="en> 
 <head>
@@ -22,4 +23,5 @@
     <br>
     <body>
         <p> You can <b>click on it </b> to go to the page where it was picked up. </p> </body>
-        </html>
+        <hr>
+        </html>                                    

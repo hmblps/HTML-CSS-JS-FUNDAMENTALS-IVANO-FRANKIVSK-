@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>02 | HTML5 Tables, Lists, Semantic Markup | Practice Task</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <style>
     body {
       background-color: black;
@@ -38,6 +38,11 @@
     section {
   text-align: center;
 }
+    @media only screen and (max-width: 600px) {
+      table, th, td {
+        font-size: 12px;
+      }
+    }
   </style>
 </head>
 <body>

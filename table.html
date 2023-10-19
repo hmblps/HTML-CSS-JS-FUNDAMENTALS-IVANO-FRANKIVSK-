@@ -1,1 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>02 | HTML5 Tables, Lists, Semantic Markup | Practice Task</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+    }
 
+    .white-text {
+      color: white;
+    }
+
+    table, th, td {
+      border-collapse: collapse;
+      border: 2px solid white;
+    }
+
+    header {
+      text-align: center;
+      font-size: 1.3em;
+      font-family: 'Impact', fantasy;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p>
+      16.10.23, Trying to create a table with HTML5; All SYSTEMS NOMINAL (no). Can't remove line above the second-to-last block.
+    </p>
+  </header>
+
+  <main>
+    <section>
+      <h1>Created an HTML table following the PowerPoint's structure.</h1>
+      <table width="90%" align="center">
+        <caption><span class="white-text">Created an HTML table following the PowerPoint's structure.</span></caption>
+        
+        <tr> 
+          <th rowspan="2">&nbsp;</th>
+          <th colspan="2">&nbsp;</th>
+          <th colspan="2">&nbsp;</th>
+          <th>&nbsp;</th>
+        </tr>
+        
+        <tr>
+          <th colspan="4">&nbsp;</th>
+          <th>&nbsp;</th>
+        </tr>
+        
+        <tr>
+          <th>&nbsp;</th>
+          <th>&nbsp;</th>
+          <th rowspan="2">&nbsp;</th>
+          <th>&nbsp;</th>
+          <th>&nbsp;</th>
+          <th>&nbsp;</th>
+        </tr>
+        
+        <tr>
+          <th rowspan="2">&nbsp;</th>
+          <th>&nbsp;</th>
+          <th>&nbsp;</th>
+        </tr>
+        
+        <tr>
+          <th colspan="3">&nbsp;</th>
+        </tr>
+        
+        <tr>
+          <th>&nbsp;</th>
+          <th colspan="3">&nbsp;</th>
+        </tr>
+      </table>
+    </section>
+  </main>
+
+  <section>
+    <h2>Random Lists</h2>
+
+    <ul type="circle"> 
+      <li>Random stuff 1</li>
+      <li>Random stuff 2</li>
+      <li>Random stuff 3</li>
+    </ul>
+    
+    <ul type="disc"> 
+      <li>Random stuff 1</li>
+      <li>Random stuff 2</li>
+      <li>Random stuff 3</li>
+    </ul>
+    
+    <ul type="square"> 
+      <li>Random stuff 1</li>
+      <li>Random stuff 2</li>
+      <li>Random stuff 3</li>
+    </ul>
+    
+    <ul> 
+      <li>Random stuff 1</li>
+      <li>Random stuff 2</li>
+      <li>Random stuff 3</li>
+    </ul>
+    
+    <ol type="I">
+      <li>Random stuff 1</li>
+      <li>Random stuff 2</li>
+      <li>Random stuff 3</li>
+    </ol>
+    
+    <ol start="5">
+      <li>Random stuff 1</li>
+      <li>Random stuff 2</li>
+      <li>Random stuff 3</li>
+    </ol>
+    
+    <ol reversed start="7">
+      <li>Random stuff 1</li>
+      <li>Random stuff 2</li>
+      <li>Random stuff 3</li>
+    </ol>
+  </section>
+</body>
+</html>

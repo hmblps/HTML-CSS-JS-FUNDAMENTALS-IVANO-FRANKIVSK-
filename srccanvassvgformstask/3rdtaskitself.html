@@ -5,25 +5,48 @@
   <title>02 | HTML5 Forms, Canvas, SVG | Practice Task</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-   
+   body {
+    background: #202020;
+    text-align: center;
+  }
+  h1 {
+      color: #FFFFFF;
+      font-family: 'Impact', sans-serif;
+      font-size: 25px;
+  }
+  figcaption {
+    font-family: 'Impact', sans-serif;
+    color: #FFFFFF;
+    font-size: 22px;
+  }
   </style>
 </head>
+<br>
 <body>
   <main>
     <section>
-     <figure>    
-     <img src="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/srccanvassvgformstask/hubble-30th-bubble-nebula2.jpg" 
-         width="600" height="300">    
-         <img src="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/srccanvassvgformstask/hubble-30th-whirlpool-galaxy.jpg" alt="hubble-30th-whirlpool-galax" 
-         width="600" height="300">    
-         <img src="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/srccanvassvgformstask/hubble-30th-lagoon-nebula.jpg" alt="hubble-30th-lagoon-nebula" 
-         width="600" height="300">    
-         <img src="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/srccanvassvgformstask/hubble-30th-milky-way-bulge.jpg" alt="hubble-30th-milky-way-bulg" 
-         width="600" height="300">    
-         <figcaption>All these Hubble iconic pictures—including the 30th Anniversary image—are also available as full-resolution posters on the <a href="https://hubblesite.org/mission-and-telescope/hubble-30th-anniversary/anniversary-resources#h3-f9482d84-d042-4a06-aa37-09029a379424" target="_blank" style="color: blue; text-decoration: none;"> Resources Page.</a></figcaption>
-         </figure>
-</section>
+      <figure>    
+        <img src="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/srccanvassvgformstask/hubble-30th-bubble-nebula2.jpg" alt="hubble-30th-bubble-nebula2." 
+             width="600" height="300">    
+        <img src="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/srccanvassvgformstask/hubble-30th-whirlpool-galaxy.jpg" alt="hubble-30th-whirlpool-galax" 
+             width="600" height="300">  
+        <figcaption> &nbsp </figcaption>
+      </figure>  
+      
+      <figure>  
+        <img src="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/srccanvassvgformstask/hubble-30th-lagoon-nebula.jpg" alt="hubble-30th-lagoon-nebula" 
+             width="600" height="300">    
+        <img src="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/srccanvassvgformstask/hubble-30th-milky-way-bulge.jpg" alt="hubble-30th-milky-way-bulg" 
+             width="600" height="300">    
+        <figcaption> &nbsp </figcaption>
+      </figure>
+
+      <figcaption>All these Hubble iconic pictures—including the 30th Anniversary image—are also available as full-resolution posters on the <a href="https://hubblesite.org/mission-and-telescope/hubble-30th-anniversary/anniversary-resources#h3-f9482d84-d042-4a06-aa37-09029a379424" target="_blank" style="color: blue; text-decoration: none;"> Resources Page.</a></figcaption>
+    </section>
 </body>
+<br>
+<br>
+<h1>Initially it was a moon, but now it's 🍪</h1>
 <body onload="drawChocoCookie();">
   <canvas id="chocoCookie" width="400" height="400">
       Update Your browser, buddy 🥲
@@ -35,7 +58,7 @@
       var context = canvas.getContext('2d');
 
       context.beginPath();
-      context.arc(200, 200, 180, 0, 2 * Math.PI);
+      context.arc(canvas.width / 2, canvas.height / 2, 180, 0, 2 * Math.PI);
       context.fillStyle = '#C88447';
       context.fill();
 
@@ -59,6 +82,7 @@
     }
   </script>
 </body>
-
+<body>
+    
 </body>
 </html>

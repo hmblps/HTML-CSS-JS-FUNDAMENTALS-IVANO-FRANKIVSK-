@@ -22,8 +22,33 @@
          width="600" height="300">    
          <figcaption>All these Hubble iconic pictures—including the 30th Anniversary image—are also available as full-resolution posters on the <a href="https://hubblesite.org/mission-and-telescope/hubble-30th-anniversary/anniversary-resources#h3-f9482d84-d042-4a06-aa37-09029a379424" target="_blank" style="color: blue; text-decoration: none;"> Resources Page.</a></figcaption>
          </figure>
+</section>
+</body>
+<body onload="drawCircle();">
 
-
+  <section>
+    <canvas id="myCanvas" height="350" width="350">
+        Update Your browser, buddy 🥲
+    </canvas>
   </section>
+
+  <script>
+    function drawCircle() {
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+
+      var centerX = canvas.width / 2;
+      var centerY = canvas.height / 2;
+      var radius = 150;
+
+      context.beginPath();
+      context.arc(centerX, centerY, radius, 0, 2 * Math.PI);
+      context.fillStyle = 'gray';
+      context.fill();
+      context.lineWidth = 3;
+      context.strokeStyle = 'lightgray';
+      context.stroke();
+    }
+  </script> 
 </body>
 </html>

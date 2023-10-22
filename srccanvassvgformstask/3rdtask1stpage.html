@@ -1,1 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>03 | HTML5 Forms, Canvas, SVG | Practice Task</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    h1 {
+      text-align: center;
+    }
 
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    video#background-video {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      min-width: 100%;
+      min-height: 56.25vw; /* 100 / (16/9) */
+      width: 177.78vh; /* 16/9 * 100vh */
+      height: 100vh;
+      z-index: -1;
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      color: #FFFFFF;
+      font-family: 'Impact', sans-serif;
+      font-size: 5vw;
+      margin: 2vh 0;
+    }
+
+    figcaption {
+      font-family: 'Impact', sans-serif;
+      color: #FFFFFF;
+      font-size: 2.4vw;
+      text-align: center;
+    }
+
+    figure {
+      text-align: center;
+    }
+
+    figure img {
+      width: 70vw;
+      max-width: 700px;
+      height: auto;
+    }
+
+    a {
+      color: blue;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <video id="background-video" autoplay muted loop>
+    <source src="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/indexasdasda.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <main>
+    <section>
+      <figure>
+        <figcaption>All these Hubble iconic pictures - including the 30th Anniversary image—are also available as full-resolution posters on the <a href="https://hubblesite.org/mission-and-telescope/hubble-30th-anniversary/anniversary-resources#h3-f9482d84-d042-4a06-aa37-09029a379424" target="_blank">Resources Page.</a></figcaption>
+        <br>
+        <img src="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/srccanvassvgformstask/hubble-30th-bubble-nebula2.jpg" alt="hubble-30th-bubble-nebula2.">
+        <img src="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/srccanvassvgformstask/hubble-30th-whirlpool-galaxy.jpg" alt="hubble-30th-whirlpool-galax">
+      </figure>
+      <br>
+      <figure>
+        <img src="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/srccanvassvgformstask/hubble-30th-lagoon-nebula.jpg" alt="hubble-30th-lagoon-nebula">
+        <img src="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/srccanvassvgformstask/hubble-30th-milky-way-bulge.jpg" alt="hubble-30th-milky-way-bulg">
+      </figure>
+    </section>
+  </main>
+  <h1><a href="#" style="color: blue; text-decoration: none;">NEXT</a></h1>
+</body>
+</html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>03 | HTML5 Forms, Canvas, SVG | Practice Task</title>
@@ -21,7 +22,9 @@
       margin: 2vh 0;
     }
 
-    h1 { font-size: 4vw; }
+    h1 {
+      font-size: 4vw;
+    }
 
     video#background-video {
       position: fixed;
@@ -33,7 +36,9 @@
       width: 177.78vh; /* 16/9 * 100vh */
       height: 100vh;
       z-index: -1;
-    }
+       filter: brightness(65%); 
+}
+    
 
     table {
       border-collapse: collapse;
@@ -48,16 +53,25 @@
     td {
       padding: 5px;
       text-align: center;
-      font-family: "Arial", sans-serif; 
+      font-family: "Arial", sans-serif;
     }
 
-    input[type="text"], input[type="checkbox"], select {
+    input[type="text"], input[type="tel"], input[type="date"], select {
       width: 100%;
       padding: 8px;
       box-sizing: border-box;
+      border: 3.5px solid #ddd; 
     }
 
-    button {
+    input[required], select[required] {
+      border: 3.5px solid red;
+    }
+
+    input[type="tel"], input[type="url"], input[type="number"], input[type="date"] {
+      background-color: #ffffff; 
+    }
+
+    button, input[type="reset"] {
       background-color: #white;
       color: #black;
       padding: 10px 20px;
@@ -65,62 +79,121 @@
       cursor: pointer;
     }
 
+    label {
+      font-family: 'Verdana', sans-serif;
+    }
+
     tr {
       color: #FFFFFF;
     }
+
+    td.column1 {
+      text-align: center;
+    }
+
+    td.column2 {
+      text-align: left;
+    }
+
+    input[pattern] {
+      border: 3.5px solid green; 
+    }
+
+    td.column1 label {
+      font-family: 'Verdana', sans-serif;
+      color: white;
+      font-weight: bold;
+    }
+    td.column2 label {
+      font-family: 'Trebuchet MS';
+      color: white;
+    }
+    
+    #header { 
+        font-family: 'Verdana', sans-serif;
+        font-weight: bold;
+    }
+        
   </style>
 </head>
+
 <body>
-  <video id="background-video" autoplay muted loop>
+  <video id="background-video" autoplay muted loop playsinline>
     <source src="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/indexasdasda.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
   <main>
-    <h1>Now forms, I confess I barely understood the topic but managed to create it with AI 🫠</h1>
+    <h1>ASTROPIZZA</h1>
+    <h2>Beyond Delicious, Straight to Your Door!</h2>
     <section>
       <form action="some_script" method="post">
         <table>
           <tr>
-            <th colspan="2">Pizza Shop 2.0</th>
+            <th colspan="2" id="header">Please fill out this form for the delivery</th>
           </tr>
           <tr>
-            <td>Name:</td>
-            <td><input type="text" name="name" placeholder="I 🧡 PIZZA"></td>
-          </tr>
-          <tr>
-            <td>Pizza Topping:</td>
-            <td>
-              <input type="checkbox" name="topping1">Supreme<br>
-              <input type="checkbox" name="topping2">Vegetarian<br>
-              <input type="checkbox" name="topping3">Hawaiian<br>
+            <td class="column1"><label for="name">Name:</label></td>
+            <td class="column2">
+              <input type="text" id="name" name="name" placeholder="Wise Oleh" autocomplete="on" pattern="[a-zA-Z\s]+" title="Only letters and spaces allowed" required>
             </td>
           </tr>
           <tr>
-            <td>Pizza Sauce:</td>
+            <td class="column1"><label>Pizza Topping:</label></td>
+            <td class="column2">
+                <input type="radio" name="topping1"><label>Supreme</label><br>
+                <input type="radio" name="topping2"><label>Vegetarian</label><br>
+                <input type="radio" name="topping3"><label>Hawaiian</label><br>
+                <input type="radio" name="topping4"><label>Pepperoni</label><br>
+                <input type="radio" name="topping5"><label>Jalapeños</label><br>
+            </td>
+          </tr>
+          <tr>
+            <td class="column1"><label for="sauce">Pizza Sauce:</label></td>
             <td>
-              <select name="sauce">
-                <option value="variant1">Random Tomato</option>
-                <option value="variant2">Cheesy Triple Cheese</option>
-                <option value="variant3">Hot & Spicy</option>
+              <select id="sauce" name="sauce" required>
+                <option value="default" selected> Choose Your Sauce </option>
+                <option value="variant1">Classic Tomato</option>
+                <option value="variant2">Pesto Sauce</option>
+                <option value="variant2">Tomato Pesto Sauce</option>
+                <option value="variant3">Barbecue Sauce</option>
+                <option value="variant3">Salsa</option>
               </select>
             </td>
           </tr>
           <tr>
-            <td>Optional Extras:</td>
-            <td>
-              <input type="checkbox" name="extra1">More Cheese<br>
-              <input type="checkbox" name="extra2">Gluten Free<br>
+            <td class="column1"><label>Optional Extras:</label></td>
+            <td class="column2">
+              <div class="optional-extras">
+                <input type="checkbox" name="extra1"><label>Extra Cheese</label><br>
+                <input type="checkbox" name="extra2"><label>Gluten Free Crust</label><br>
+                <input type="checkbox" name="extra3"><label>Add More Veggies</label><br>
+                <input type="checkbox" name="extra4"><label>Truffle Oil</label><br>
+                <input type="checkbox" name="extra5"><label>Microgreen</label><br>
+              </div>
             </td>
           </tr>
           <tr>
-            <td colspan="2">Delivery Instructions:</td>
+            <td class="column1"><label for="deliveryDate">Date of Delivery:</label></td>
+            <td>
+              <input type="date" id="deliveryDate" name="deliveryDate" required>
+            </td>
           </tr>
           <tr>
-            <td colspan="2"><input type="text" name="deliveryInstructions" placeholder="White House, 1600 Pennsylvania Avenue, NW, Washington, DC"></td>
+            <td class="column1"><label for="phone">Phone Number:</label></td>
+            <td>
+              <input type="tel" id="phone" name="phone" placeholder="+380123456789" pattern="\+380[0-9]{9}" required>
+            </td>
+          </tr>
+          <tr>
+            <td class="column1" colspan="2"><label for="deliveryInstructions">Delivery Address:</label></td>
+          </tr>
+          <tr>
+            <td colspan="2"><input type="text" id="deliveryInstructions" name="deliveryInstructions" placeholder="Olehivska Street 1, Kyiv, Ukraine, 04071" required></td>
           </tr>
           <tr>
             <td colspan="2">
               <button type="submit">Send My Order</button>
+              <input type="reset" value="Reset">
             </td>
           </tr>
         </table>
@@ -128,4 +201,5 @@
     </section>
   </main>
 </body>
+
 </html>

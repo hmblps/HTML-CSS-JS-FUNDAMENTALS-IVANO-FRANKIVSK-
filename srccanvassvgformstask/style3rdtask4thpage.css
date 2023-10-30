@@ -1,3 +1,4 @@
+/* Resetting default margin on body and centering content */
 body {
   margin: 0;
   display: flex;
@@ -7,6 +8,7 @@ body {
   height: 100vh;
 }
 
+/* Styling for headings */
 h1, h2 {
   text-align: center;
   color: #FFFFFF;
@@ -18,6 +20,7 @@ h1 {
   font-size: 4vw;
 }
 
+/* Styling for the background video */
 video#background-video {
   position: fixed;
   top: 50%;
@@ -31,6 +34,7 @@ video#background-video {
   filter: brightness(65%);
 }
 
+/* Styling for the table */
 table {
   border-collapse: collapse;
   width: 400px;
@@ -47,6 +51,7 @@ td {
   font-family: "Arial", sans-serif;
 }
 
+/* Styling for form elements */
 input[type="text"], input[type="tel"], input[type="date"], select {
   width: 100%;
   padding: 8px;
@@ -62,6 +67,7 @@ input[type="tel"], input[type="url"], input[type="number"], input[type="date"] {
   background-color: #ffffff;
 }
 
+/* Styling for buttons */
 button, input[type="reset"] {
   background-color: #white;
   color: #black;
@@ -70,10 +76,12 @@ button, input[type="reset"] {
   cursor: pointer;
 }
 
+/* Styling for labels */
 label {
   font-family: 'Verdana', sans-serif;
 }
 
+/* Styling for table rows and columns */
 tr {
   color: #FFFFFF;
 }
@@ -86,6 +94,7 @@ td.column2 {
   text-align: left;
 }
 
+/* Styling for input with pattern */
 input[pattern] {
   border: 3.5px solid green;
 }
@@ -101,11 +110,13 @@ td.column2 label {
   color: white;
 }
 
+/* Styling for header */
 #header {
   font-family: 'Verdana', sans-serif;
   font-weight: bold;
 }
 
+/* Hiding play button on the background video for WebKit browsers */
 video#background-video::-webkit-media-controls-start-playback-button {
   display: none;
 }

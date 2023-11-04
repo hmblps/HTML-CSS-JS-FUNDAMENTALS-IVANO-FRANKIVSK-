@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HMBLPS TASKS</title>
   <style>
     body {
       background-color: #202020;
       color: white;
+      font-size: 5vh;
+      font-family: 'Arial', sans-serif;
     }
 
     main {
@@ -14,13 +17,13 @@
       margin: 0 auto;
     }
 
-    ul, ol {
+    .vertical-events {
       display: block;
       color: white;
       text-align: center;
-      margin: 10px auto;
-      padding: 10px;
-      list-style-position: inside;
+      margin: 1vh auto; 
+      padding: 1vh;
+      font-size: 4vh;
     }
 
     header, section {
@@ -28,7 +31,7 @@
     }
 
     p {
-      font-size: 1.4em;
+      font-size: 4vh; 
       font-family: 'Impact', fantasy;
     }
 
@@ -36,10 +39,30 @@
       color: white;
       text-decoration: none;
     }
+
     h1 {
-      font-size: 1.5em;
+      font-size: 5vh; 
       font-family: 'Impact', fantasy;
-      margin: 10px 0;
+      margin: 2vh 0; 
+    }
+
+    @media screen and (max-width: 600px) {
+      body {
+        font-size: 4vh;
+      }
+    }
+
+    @media screen and (min-width: 601px) and (max-width: 1024px) {
+      body {
+        font-size: 6vh;
+      }
+    }
+
+    @media screen and (min-width: 1025px) {
+      body {
+        font-size: 8vh;
+      }
+    }
   </style>
 </head>
 <body> 
@@ -55,11 +78,15 @@
     <hr>
     
     <section>
-      <ol start="1">
-        <li><a href="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/helloworldtask.html" target="_blank">Hello World Task</a></li>
-        <li><a href="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/tableandliststask.html" target="_blank">Table & Lists Task</a></li>
-        <li><a href="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/srccanvassvgformstask/3rdtask1stpage.html" target="_blank">Pics, Canvas, SVG, Form Task</li>
-      </ol>
+      <div class="vertical-events">
+        <a href="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/helloworldtask.html" target="_blank">Hello World Task</a>
+      </div>
+      <div class="vertical-events">
+        <a href="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/tableandliststask.html" target="_blank">Table & Lists Task</a>
+      </div>
+      <div class="vertical-events">
+        <a href="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/srccanvassvgformstask/3rdtask1stpage.html" target="_blank">Pics, Canvas, SVG, Form Task</a>
+      </div>
     </section>
   </main>
 </body>

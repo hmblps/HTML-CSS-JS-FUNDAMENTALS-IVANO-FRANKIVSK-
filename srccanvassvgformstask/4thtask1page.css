@@ -13,24 +13,33 @@ video#background-video {
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   min-width: 100%;
-  min-height: 56.25vh; 
-  width: 177.78vh; 
+  min-height: 56.25vh;
+  width: 177.78vh;
   height: 100vh;
   z-index: -1;
   filter: brightness(65%);
 }
 
 .styled-div {
-  width: 350px;
-  max-width: 600px;
+  width: 100px;
+  max-width: 400px;
   margin: 20px auto;
-  padding: 5.5px;
+  padding: 0px; 
   border: 2px solid white;
   overflow: scroll;
   box-sizing: border-box;
   background-color: black;
   border-radius: 8px;
   color: white;
+  height: 40%; 
+}
+
+.styled-div img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  overflow: scroll;
 }
 
 main {

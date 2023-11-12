@@ -30,6 +30,7 @@ main {
 .img-column {
   width: 50%;
   padding-left: 0px;
+  height: 70vh;
   border-width: 4.5px;
   border-style: inset;
   border-color: #6a5acd;
@@ -63,23 +64,27 @@ main {
   margin-right: 30px;
   margin-bottom: 49.5px;
   margin-left: 10px;
-  line-height: 0.8;
+  line-height: 1;
 }
 
 #text-container1 {
   top: 0;
+  overflow: auto;
 }
 
 #text-container2 {
   top: 25vh;
+  overflow: auto;
 }
 
 #text-container3 {
   top: 50vh;
+  overflow: auto;
 }
 
 #text-container4 {
   top: 75vh;
+  overflow: auto;
 }
 
 img {
@@ -112,14 +117,17 @@ img {
 @media (max-width: 575.98px) {
   .text-column {
     width: 50%;
-    margin-left: 3%,
-    font-size: 1vw;
+    height: 70vh;
+    margin-left: 3%;
+    font: 2vw/1 'Courier New', sans-serif;
+    color: purple;
   }
 
   .img-column {
     width: 50%;
+    height: 70vh;
     margin-top: 20px;
-    margin-right: 3%,
+    margin-right: 3%;
   }
 }
 
@@ -127,29 +135,16 @@ img {
 @media (min-width: 576px) and (max-width: 767.98px) {
   .text-column {
     width: 50%;
-    float: left;
-    margin-right: 3%;
-    font-size: 1vw;
+    height: 70vh;
+    margin-left: 3%;
+    font: 2vw/1 'Courier New', sans-serif;
+    color: purple;
   }
 
   .img-column {
     width: 50%;
-    float: left;
-    margin-left: 3%;
-  }
-}
-
-/* Average screen */
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .text-column {
-    width: 50%;
-    float: left;
+    height: 70vh;
+    margin-top: 20px;
     margin-right: 3%;
-  }
-
-  .img-column {
-    width: 50%;
-    float: left;
-    margin-left: 3%;
   }
 }

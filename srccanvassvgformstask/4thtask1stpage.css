@@ -1,3 +1,5 @@
+/* MAIN Styles */
+
 #background-video {
   position: fixed;
   top: 0;
@@ -14,7 +16,7 @@ main {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  font-size: 16pt; 
+  font-size: 16pt;
 }
 
 .text-column {
@@ -22,6 +24,7 @@ main {
   padding-right: 20px;
   height: 70vh;
   overflow-y: scroll;
+  margin-left: 3%
 }
 
 .img-column {
@@ -31,6 +34,7 @@ main {
   border-style: inset;
   border-color: #6a5acd;
   border-radius: 8px;
+  margin-right: 3%
 }
 
 #myDIV {
@@ -43,50 +47,23 @@ main {
   margin-right: 10px;
 }
 
-#text-container1{
-  font-size: 16pt; 
-  overflow: auto;
-}
-span {
-  font-size: 0.8em; 
-   }
-
-#text-container2 {
-  font-size: 16pt; 
-  overflow: hidden;
-}
-span {
-  font-size: 0.65rem; 
-   }
-
-#text-container3 {
-  font-size: 5.5vh; 
-  overflow: scroll;
-}
-
-#text-container4 {
-  font-size: 2.3vw; 
-  overflow: visible;
-}
-
 #text-container1,
 #text-container2,
 #text-container3,
 #text-container4 {
   height: 25vh;
   padding: 1.5px;
-  
   background-color: white;
   border-width: 4.5px;
   border-style: inset;
   border-color: #6a5acd;
   border-radius: 8px;
-font-family: Baskerville;
+  font-family: Baskerville;
   text-align: justify;
   margin-right: 30px;
   margin-bottom: 49.5px;
   margin-left: 10px;
-  line-height: 0.8; 
+  line-height: 0.8;
 }
 
 #text-container1 {
@@ -112,9 +89,9 @@ img {
 
 #BackButton {
   font-size: 8pt;
-  font-weight: bold; 
+  font-weight: bold;
   padding: 0;
-  width: 40px; 
+  width: 40px;
   height: 40px;
   background-color: #6a5acd;
   color: white;
@@ -127,4 +104,52 @@ img {
   align-items: center;
   justify-content: center;
   text-decoration: none;
+}
+
+/* Media Queries */
+
+/* Portrait phones */
+@media (max-width: 575.98px) {
+  .text-column {
+    width: 50%;
+    margin-left: 3%,
+    font-size: 1vw;
+  }
+
+  .img-column {
+    width: 50%;
+    margin-top: 20px;
+    margin-right: 3%,
+  }
+}
+
+/* Landscape phones */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .text-column {
+    width: 50%;
+    float: left;
+    margin-right: 3%;
+    font-size: 1vw;
+  }
+
+  .img-column {
+    width: 50%;
+    float: left;
+    margin-left: 3%;
+  }
+}
+
+/* Average screen */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .text-column {
+    width: 50%;
+    float: left;
+    margin-right: 3%;
+  }
+
+  .img-column {
+    width: 50%;
+    float: left;
+    margin-left: 3%;
+  }
 }

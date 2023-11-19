@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator Experience</title>
-    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>MY JS CALC Experience</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <style>
         body {
             height: 100vh;
@@ -13,6 +13,18 @@
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+
+        h1 {
+            font-family: 'Apple Baskerville', sans-serif;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: white;
+            font-size: 35px;
+            justify-content: center;
+            margin-left: 85px;
+            
         }
 
         #background-video {
@@ -96,73 +108,68 @@
 </head>
 
 <body>
-    <video id="background-video" autoplay muted loop playsinline>
-        <source
-            src="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/indexasdasda.mp4"
-            type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <div class="calculator-container">
-        <!-- First Calculator Section -->
-        <div class="calculator-section">
-            <form>
-                <div class="row mb-3">
-                    <div class="col">
-                        <input type="number" class="input-field" id="first-number"
-                            placeholder="Enter 1st Number/Primul număr">
-                    </div>
-
-                    <div class="col">
-                        <select class="select-field" id="operation">
-                            <option disabled selected>Choose Operation/Alegeți operația</option>
-                            <option value="add">Addition (+)</option>
-                            <option value="subtract">Subtraction (-)</option>
-                            <option value="multiply">Multiplication (x)</option>
-                            <option value="divide">Division (/)</option>
-                        </select>
-                    </div>
-
-                    <div class="col">
-                        <input type="number" class="input-field" id="second-input"
-                            placeholder="Enter 2nd Number/Doilea număr">
-                    </div>
-                </div>
-
-                <div class="row mb-3">
-                    <div class="col">
-                        <div class="mt-3 p-3 border">
-                            <input type="number" class="input-field" id="result"
-                                placeholder="Enter Result/Introduceți rezultatul">
+    <main>
+        <video id="background-video" autoplay muted loop playsinline>
+            <source
+                src="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/indexasdasda.mp4"
+                type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h1>SHOW ME YOUR CALCULATING SKILLS</h1>
+        <div class="calculator-container">
+            <div class="calculator-section">
+                <form>
+                    <div class="row mb-3">
+                        <div class="col">
+                            <input type="number" class="input-field" id="input1"
+                                placeholder="Enter 1st Number/Primul număr">
+                        </div>
+                        <div class="col">
+                            <select class="select-field" id="action">
+                                <option disabled selected>Choose Operation/Alegeți operația</option>
+                                <option value="add">Addition (+)</option>
+                                <option value="subtract">Subtraction (-)</option>
+                                <option value="multiply">Multiplication (x)</option>
+                                <option value="divide">Division (/)</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <input type="number" class="input-field" id="second-input"
+                                placeholder="Enter 2nd Number/Doilea număr">
                         </div>
                     </div>
-                </div>
-
-                <div class="row mb-3">
-                    <div class="col">
-                        <button class="btn btn-primary action-button" disabled id="verify" onclick="verify()">Verify/Verificare</button>
+                    <div class="row mb-3">
+                        <div class="col">
+                            <div class="mt-3 p-3 border">
+                                <input type="number" class="input-field" id="result"
+                                    placeholder="Enter Result/Introduceți rezultatul">
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </form>
-
-            <div id="try-again-message">Try Again 😕</div>
-            <div id="congrats-message">Congrats 🥳</div>
+                    <div class="row mb-3">
+                        <div class="col">
+                            <button class="btn btn-primary action-button" disabled id="check" onclick="check()">Verify/Verificare</button>
+                        </div>
+                    </div>
+                </form>
+                <div id="try-again-message">Try Again 😕</div>
+                <div id="congrats-message">Congrats 🥳</div>
+            </div>
+            <div class="calculator-section">
+                <form>
+                    <div class="row mb-3">
+                        It's nothing but a simple calculator. You can perform addition, subtraction, multiplication, and
+                        division with the numbers you input on the left side of the form. But first, try it yourself 😃 and
+                        then press "Verify" to confirm if the result is accurate. Enjoy!<br><br>
+                        Nu este decât un simplu calculator. Puteți efectua adunări, scăderi, înmulțiri și împărțiri cu
+                        numerele pe care le introduceți în partea stângă a formularului. Dar mai întâi, încercați singur 😃 și
+                        apoi apăsați "Verificare" pentru a confirma dacă rezultatul este corect. Bucurați-vă!
+                    </div>
+                </form>
+            </div>
         </div>
-
-        <!-- Second Calculator Section -->
-        <div class="calculator-section">
-            <form>
-                <div class="row mb-3">
-                    It's nothing but a simple calculator. You can perform addition, subtraction, multiplication, and
-                    division with the numbers you input on the left side of the form. But first, try it yourself 😃 and
-                    then press "Verify" to confirm if the result is accurate. Enjoy!<br><br>
-                    Nu este decât un simplu calculator. Puteți efectua adunări, scăderi, înmulțiri și împărțiri cu
-                    numerele pe care le introduceți în partea stângă a formularului. Dar mai întâi, încercați singur 😃 și
-                    apoi apăsați "Verificare" pentru a confirma dacă rezultatul este corect. Bucurați-vă!
-                </div>
-            </form>
-        </div>
-    </div>
-    <script src="5thtask.js"></script>
+         <script src="5thtask.js"></script>
+    </main>
 </body>
 
 </html>

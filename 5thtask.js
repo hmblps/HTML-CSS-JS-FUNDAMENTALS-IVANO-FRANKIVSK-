@@ -47,11 +47,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Display appropriate message based on user's answer
         if (userAnswer == rightAnswer) {
-            alert("Congrats/Felicitări! 🥳");
+            // alert("Congrats/Felicitări! 🥳");
+            document.getElementById("success").style.display="block";
         } else {
             alert("You're wrong, try again/Greșești, încearcă din nou! 🥲");
-            document.getElementById("try-again-message").style.display = "block";
-            document.getElementById("congrats-message").style.display = "none";
+            document.getElementById("fail").style.display="block";
         }
     }
 
@@ -61,16 +61,18 @@ document.addEventListener("DOMContentLoaded", function () {
     // Function to calculate the correct answer based on the selected action
     function calculateRightAnswer(action, a, b) {
         switch (action) {
-            case "add":
+            case "+":
                 return Number(a) + Number(b);
-            case "subtract":
+            case "-":
                 return Number(a) - Number(b);
-            case "multiply":
+            case "*":
                 return Number(a) * Number(b);
-            case "divide":
+            case "/":
                 return Number(a) / Number(b);
             default:
-                return "CHOOSE ACTION";
+                return "&#9658;";
         }
     }
+
+
 });

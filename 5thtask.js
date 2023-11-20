@@ -48,12 +48,22 @@ document.addEventListener("DOMContentLoaded", function () {
         // Display appropriate message based on user's answer
         if (userAnswer == rightAnswer) {
             // alert("Congrats/Felicitări! 🥳");
-            document.getElementById("success").style.display="block";
+            document.getElementById("success").style.display="flex";
+            setTimeout(closePopup, 1500);
+            
         } else {
-            alert("You're wrong, try again/Greșești, încearcă din nou! 🥲");
-            document.getElementById("fail").style.display="block";
+            // alert("You're wrong, try again/Greșești, încearcă din nou! 🥲");
+            document.getElementById("fail").style.display="flex";
+            setTimeout(closePopup, 1500);
+        }
+
+        function closePopup() {
+            console.log('Closing popups'); 
+            document.getElementById("success").style.display = 'none';
+            document.getElementById("fail").style.display = 'none';
         }
     }
+
 
     // Assign the check function to the "Verify" button click
     document.getElementById("check").addEventListener("click", check);

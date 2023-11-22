@@ -8,7 +8,7 @@
   height: 100%;
   object-fit: cover;
   z-index: -1;
-  filter: brightness(65%);
+  filter: brightness(65%) 
 }
 
 main {
@@ -16,7 +16,7 @@ main {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  font-size: 16pt;
+  font-size: 16pt !important;
 }
 
 .text-column {
@@ -24,7 +24,7 @@ main {
   padding-right: 20px;
   height: 70vh;
   overflow-y: scroll;
-  margin-left: 3%
+  margin-left: 3% !important;
 }
 
 .img-column {
@@ -35,7 +35,7 @@ main {
   border-style: inset;
   border-color: #6a5acd;
   border-radius: 8px;
-  margin-right: 3%
+  margin-right: 3% !important;
 }
 
 #myDIV {
@@ -45,7 +45,7 @@ main {
   margin: auto;
   position: relative;
   overflow-y: scroll;
-  margin-right: 10px;
+  margin-right: 10px !important;
 }
 
 #text-container1,
@@ -92,25 +92,6 @@ img {
   height: auto;
 }
 
-#BackButton {
-  font-size: 8pt;
-  font-weight: bold;
-  padding: 0;
-  width: 40px;
-  height: 40px;
-  background-color: #6a5acd;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-}
-
 /* Media Queries */
 
 /* Portrait phones */
@@ -118,16 +99,16 @@ img {
   .text-column {
     width: 50%;
     height: 70vh;
-    margin-left: 3%;
+    margin-left: 3% !important;
     font: 2vw/1 'Courier New', sans-serif;
-    color: purple;
+    color: purple !important;
   }
 
   .img-column {
     width: 50%;
     height: 70vh;
     margin-top: 20px;
-    margin-right: 3%;
+    margin-right: 3% !important;
   }
 }
 
@@ -136,15 +117,55 @@ img {
   .text-column {
     width: 50%;
     height: 70vh;
-    margin-left: 3%;
+    margin-left: 3% !important;
     font: 2vw/1 'Courier New', sans-serif;
-    color: purple;
+    color: purple !important;
   }
 
   .img-column {
     width: 50%;
     height: 70vh;
     margin-top: 20px;
-    margin-right: 3%;
+    margin-right: 3% !important;
   }
+}
+
+/* Custom Styles */
+.navbar-custom {
+  background-color: rgba(248, 249, 250, 0.3);
+  color: white;
+  width: 100%;
+  margin-left: 0;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  padding: 10px;
+  height: 50px;
+}
+
+.ulcolor {
+  background-color: rgba(248, 249, 250, 0);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  margin-top: 15px;
+  margin-left: auto;
+}
+
+.ulcolor .nav-item:not(:last-child) {
+  margin-right: 15px;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: white;
+}
+
+.nav-link.text-end {
+  font-size: 14px;
+}
+
+.navbar-nav .nav-link {
+  font-size: 16px;
 }

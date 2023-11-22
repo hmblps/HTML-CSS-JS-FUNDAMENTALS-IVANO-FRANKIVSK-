@@ -8,12 +8,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
         body {
-            height: 100vh;
-            margin: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
 
         h1 {
             font-family: 'Apple Baskerville', sans-serif;
@@ -23,8 +29,9 @@
             color: white;
             font-size: 33px;
             justify-content: center;
-            margin-left: 52px;
             
+            margin-top: 150px;
+
         }
 
         h2 {
@@ -34,8 +41,8 @@
             color: white;
             font-size: 33px;
             justify-content: center;
-            margin-left: 69px;
             
+
         }
 
         #background-video {
@@ -56,6 +63,7 @@
             background: rgba(255, 255, 255, 0.0);
             border-radius: 10px;
             padding: 50px;
+            margin-top: 45px;
         }
 
         .calculator-container .calculator-section {
@@ -76,7 +84,7 @@
 
         .input-field,
         .select-field,
-        
+
         .result-field {
             width: 100%;
             box-sizing: border-box;
@@ -87,27 +95,28 @@
             padding: 10px;
             margin-bottom: 15px;
         }
-        
-        .action-button:disabled {
-    background-color: white; 
-    border: 4.5px inset #6a5acd;
-    border-radius: 10px;
-    color: black;
-    border: 4.5px inset #6a5acd;
-    width: 100%; 
-}
 
-.action-button {
-    background-color: green; 
-    color: black; 
-    border: 4.5px inset green;
-    border-radius: 10px;
-    width: 100%; 
-}
+        .action-button:disabled {
+            background-color: white;
+            border: 4.5px inset #6a5acd;
+            border-radius: 10px;
+            color: black;
+            border: 4.5px inset #6a5acd;
+            width: 100%;
+        }
+
+        .action-button {
+            background-color: green;
+            color: black;
+            border: 4.5px inset green;
+            border-radius: 10px;
+            width: 100%;
+        }
 
         .calculator-container .calculator-section .input-field #second-input {
             overflow: auto;
             max-height: 100px;
+            text-align: justify;
         }
 
         .action-button {
@@ -131,24 +140,96 @@
             border-radius: 8px;
             padding: 10px;
             margin-bottom: 15px;
+            text-align: justify;
         }
 
         .calculator-container .calculator-section.text-wrap {
-            width: 100%; 
-    max-height: 300px;
-    overflow: auto;
+            width: 100%;
+            font-size: 13px;
+            line-height: 1.2;
+            text-align: justify;
+
+            max-height: 300px;
+            overflow: auto;
+        }
+
+        .navbar-custom {
+    background-color: rgba(248, 249, 250, 0.3);
+    color: white;
+    width: 100%;
+    margin-left: 0px;
+    position: fixed;
+    z-index: 1000;
+    padding: 10px; 
+    height: 50px; 
 }
+
+.ulcolor {
+    
+    background-color: rgba(248, 249, 250, 0); 
+    color: white; 
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    margin-top: 15px; 
+}
+
+.ulcolor .nav-item:not(:last-child) {
+        margin-right: 15px; 
+    }
+
+    .ulcolor {
+        margin-left: auto;
+    }
+
+    .navbar-brand {
+        font-weight: bold;
+        color: white;
+    }
+
     </style>
 </head>
 
 <body>
+    <video id="background-video" autoplay muted loop playsinline>
+        <source
+            src="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/indexasdasda.mp4"
+            type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">MY HOMEWORK</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="ulcolor ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link text-end" href="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-end" href="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/helloworldtask.html">Task 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-end" href="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/tableandliststask.html">Task 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-end" href="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/srccanvassvgformstask/3rdtask1stpage.html">Task 3</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-end" href="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/srccanvassvgformstask/4thtask1stpage.html">Task 4</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-end" href="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/5thtaskcalc.html">Task 5</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
     <main>
-        <video id="background-video" autoplay muted loop playsinline>
-            <source
-                src="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/indexasdasda.mp4"
-                type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
         <h1>SHOW ME YOUR CALCULATING SKILLS</h1>
         <h2>ARATĂ-MI ABILITĂȚILE TALE DE CALCUL</h2>
         <div class="calculator-container">
@@ -187,8 +268,8 @@
                         </div>
                     </div>
                 </div>
-                <div id="try-again-message">Try Again 😕</div>
-                <div id="congrats-message">Congrats 🥳</div>
+                <div id="try-again-message">Try Again/Încearcă din nou 😕</div>
+                <div id="congrats-message">Congrats/Felicitări 🥳</div>
             </div>
             <div class="calculator-section">
                 <div>
@@ -196,20 +277,18 @@
                         It's nothing but a simple calculator. You can perform addition, subtraction, multiplication, and
                         division with the numbers you input on the left side of the form. But first, try it yourself 😃 and
                         then press "Verify" to confirm if the result is accurate. Enjoy!<br><br>
-                        Nu este decât un simplu calculator. Puteți efectua adunări, scăderi, înmulțiri și împărțiri cu
-                        numerele pe care le introduceți în partea stângă a formularului. Dar mai întâi, încercați singur 😃 și
-                        apoi apăsați "Verificare" pentru a confirma dacă rezultatul este corect. Bucurați-vă!
+                        Acesta nu este altceva decât un simplu calculator. Puteți adăuga, scădea, înmulți și împărți numerele introduse în partea stângă a formularului. Dar încercați mai întâi singur 😃, apoi faceți clic pe „Verificați” pentru a confirma că rezultatul este corect. A se distra!
                     </div>
                 </div>
             </div>
         </div>
-        <div class="alert alert-primary" id="success" role="alert" style="display: none; width: 8.5%; position: fixed; top: 50%; left: 50%; z-index: 9999;">
-            Congrats 🥳
-          </div>
-          <div class="alert alert-secondary" id="fail" role="alert" style="display: none; width: 8.5%; position: fixed; top: 50%; left: 50%; z-index: 9999;">
-            Try Again 😕
-          </div>
-         <script src="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/5thtask.js"></script>
+        <div class="alert alert-primary" id="success" role="alert" style="display: none; width: 13%; position: fixed; top: 45%; left: 45%; z-index: 9999;">
+            Congrats/Felicitări 🥳
+        </div>
+        <div class="alert alert-secondary" id="fail" role="alert" style="display: none; width: 17.2%; position: fixed; top: 45%; left: 45%; z-index: 9999;">
+            Try Again/Încearcă din nou 😕
+        </div>
+        <script src="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/5thtask.js"></script>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>

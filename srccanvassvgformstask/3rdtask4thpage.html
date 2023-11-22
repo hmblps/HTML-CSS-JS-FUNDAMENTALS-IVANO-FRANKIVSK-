@@ -6,6 +6,8 @@
   <title>03 | HTML5 Forms, Canvas, SVG | Practice Task</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style3rdtask4thpage.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-pzjw8P+Y1uVgtIka9fF5Q1lF2QCn9x41J6l3J5u6Dkfs/kxg9R2XkHNf1NtGOy5Q" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -13,78 +15,111 @@
     <source src="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/indexasdasda.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
+
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">MY HOMEWORK</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="ulcolor ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link text-end" href="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-end" href="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/helloworldtask.html">Task 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-end" href="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/tableandliststask.html">Task 2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-end" href="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/srccanvassvgformstask/3rdtask1stpage.html">Task 3</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-end" href="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/srccanvassvgformstask/4thtask1stpage.html">Task 4</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-end" href="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/5thtaskcalc.html">Task 5</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
   <main>
     <h1>ASTROPIZZA</h1>
-    <h2>Beyond Delicious, Straight to Your Door!</h2>
+    <h2 data-toggle="tooltip" title="Dincolo de Delicious, direct la ușa ta!">Beyond Delicious, Straight to Your Door!</h2>
     <section>
       <form action="some_script" method="post">
         <table>
           <tr>
-            <th colspan="2" id="header">Please fill out this form for the delivery</th>
+            <th colspan="2" id="header" data-toggle="tooltip" title="Vă rugăm să completați acest formular pentru livrare">Please fill out this form for the delivery</th>
           </tr>
           <tr>
-            <td class="column1"><label for="name">Name:</label></td>
+            <td class="column1"><label for="name" data-toggle="tooltip" title="Nume">Name:</label></td>
             <td class="column2">
               <input type="text" id="name" name="name" placeholder="Wise Oleh" autocomplete="on" pattern="[a-zA-Z\s]+" title="Only letters and spaces allowed" required>
             </td>
           </tr>
           <tr>
-            <td class="column1"><label>Pizza Topping:</label></td>
+            <td class="column1" data-toggle="tooltip" title="Topping pentru pizza"><label>Pizza Topping:</label></td>
             <td class="column2">
-                <input type="radio" name="topping1"><label>Supreme</label><br>
-                <input type="radio" name="topping2"><label>Vegetarian</label><br>
-                <input type="radio" name="topping3"><label>Hawaiian</label><br>
-                <input type="radio" name="topping4"><label>Pepperoni</label><br>
-                <input type="radio" name="topping5"><label>Jalapeños</label><br>
+                <input type="radio" name="topping1" data-toggle="tooltip" title="Suprem"><label>Supreme</label><br>
+                <input type="radio" name="topping2" data-toggle="tooltip" title="Vegetariană"><label>Vegetarian</label><br>
+                <input type="radio" name="topping3" data-toggle="tooltip" title="Hawaian"><label>Hawaiian</label><br>
+                <input type="radio" name="topping4" data-toggle="tooltip" title="Piperoni"><label>Pepperoni</label><br>
+                <input type="radio" name="topping5" data-toggle="tooltip" title="Jalapeńo"><label>Jalapeños</label><br>
             </td>
           </tr>
           <tr>
-            <td class="column1"><label for="sauce">Pizza Sauce:</label></td>
+            <td class="column1" data-toggle="tooltip" title="Sos de pizza"><label for="sauce">Pizza Sauce:</label></td>
             <td>
               <select id="sauce" name="sauce" required>
                 <option value="default" disabled selected> Choose Your Sauce </option>
-                <option value="variant1">Classic Tomato</option>
-                <option value="variant2">Pesto Sauce</option>
-                <option value="variant2">Tomato Pesto Sauce</option>
-                <option value="variant3">Barbecue Sauce</option>
+                <option value="variant1" data-toggle="tooltip" title="Tomată clasică">Classic Tomato</option>
+                <option value="variant2" data-toggle="tooltip" title="Sos de pesto">Pesto Sauce</option>
+                <option value="variant2" data-toggle="tooltip" title="Sos de roșii Pesto">Tomato Pesto Sauce</option>
+                <option value="variant3" data-toggle="tooltip" title="Sos pentru grătar">Barbecue Sauce</option>
                 <option value="variant3">Salsa</option>
               </select>
             </td>
           </tr>
           <tr>
-            <td class="column1"><label>Optional Extras:</label></td>
+            <td class="column1" data-toggle="tooltip" title="Suplimente opționale"><label>Optional Extras:</label></td>
             <td class="column2">
               <div class="optional-extras">
-                <input type="checkbox" name="extra1"><label>Extra Cheese</label><br>
-                <input type="checkbox" name="extra2"><label>Gluten Free Crust</label><br>
-                <input type="checkbox" name="extra3"><label>Add More Veggies</label><br>
-                <input type="checkbox" name="extra4"><label>Truffle Oil</label><br>
-                <input type="checkbox" name="extra5"><label>Microgreen</label><br>
+                <input type="checkbox" name="extra1" data-toggle="tooltip" title="Brânză Extra"><label>Extra Cheese</label><br>
+                <input type="checkbox" name="extra2" data-toggle="tooltip" title="Crustă fără gluten"><label>Gluten Free Crust</label><br>
+                <input type="checkbox" name="extra3" data-toggle="tooltip" title="Adaugă mai multe legume"><label>Add More Veggies</label><br>
+                <input type="checkbox" name="extra4" data-toggle="tooltip" title="Uleiul de trufe"><label>Truffle Oil</label><br>
+                <input type="checkbox" name="extra5" data-toggle="tooltip" title="Micro iarbă"><label>Microgreen</label><br>
               </div>
             </td>
           </tr>
           <tr>
-            <td class="column1"><label for="deliveryDate">Date of Delivery:</label></td>
+            <td class="column1"><label for="deliveryDate" data-toggle="tooltip" title="Data de livrare">Date of Delivery:</label></td>
             <td>
               <input type="date" id="deliveryDate" name="deliveryDate" required>
             </td>
           </tr>
           <tr>
-            <td class="column1"><label for="phone">Phone Number:</label></td>
+            <td class="column1"><label for="phone" data-toggle="tooltip" title="Număr de telefon">Phone Number:</label></td>
             <td>
               <input type="tel" id="phone" name="phone" placeholder="+380123456789" pattern="\+380[0-9]{9}" required>
             </td>
           </tr>
           <tr>
-            <td class="column1" colspan="2"><label for="deliveryInstructions">Delivery Address:</label></td>
+            <td class="column1" colspan="2"><label for="deliveryInstructions" data-toggle="tooltip" title="Adresa de livrare">Delivery Address:</label></td>
           </tr>
           <tr>
             <td colspan="2"><input type="text" id="deliveryInstructions" name="deliveryInstructions" placeholder="Olehivska Street 1, Kyiv, Ukraine, 04071" required></td>
           </tr>
           <tr>
             <td colspan="2">
-              <button type="submit">Send My Order</button>
-              <input type="reset" value="Reset">
+              <button type="submit" data-toggle="tooltip" title="Trimite comanda mea">Send My Order</button>
+              <input type="reset" value="Reset" data-toggle="tooltip" title="Resetare">
             </td>
           </tr>
         </table>

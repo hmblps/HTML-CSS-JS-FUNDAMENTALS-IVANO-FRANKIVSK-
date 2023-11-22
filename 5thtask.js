@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Event listeners for input1, action dropdown, and input2
+    // Event listeners for input1, action dropdown, input2, and result
     let input1 = document.getElementById("input1");
     input1.addEventListener("input", updateFields);
 
@@ -9,15 +9,19 @@ document.addEventListener("DOMContentLoaded", function () {
     let input2 = document.getElementById("second-input");
     input2.addEventListener("input", updateFields);
 
+    let resultField = document.getElementById("result");
+    resultField.addEventListener("input", updateFields); // Added event listener for result input
+
     // Function to update the "Verify" button and fields based on input values
     function updateFields() {
         let input1Value = input1.value.trim();
         let actionValue = action.value.trim();
         let input2Value = input2.value.trim();
+        let resultValue = resultField.value.trim(); // Get result input value
 
-        // Enable the "Verify" button only if all fields are filled
+        // Enable the "Verify" button only if the result input is filled
         let verifyButton = document.getElementById("check");
-        verifyButton.disabled = !(input1Value && actionValue && input2Value);
+        verifyButton.disabled = !resultValue;
 
         // Update the result field placeholder with chosen characters
         updateResultPlaceholder();
@@ -47,12 +51,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Display appropriate message based on user's answer
         if (userAnswer == rightAnswer) {
-            // alert("Congrats/Felicitări! 🥳");
             document.getElementById("success").style.display="flex";
             setTimeout(closePopup, 1500);
-            
         } else {
-            // alert("You're wrong, try again/Greșești, încearcă din nou! 🥲");
             document.getElementById("fail").style.display="flex";
             setTimeout(closePopup, 1500);
         }
@@ -63,7 +64,6 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("fail").style.display = 'none';
         }
     }
-
 
     // Assign the check function to the "Verify" button click
     document.getElementById("check").addEventListener("click", check);
@@ -83,6 +83,4 @@ document.addEventListener("DOMContentLoaded", function () {
                 return "&#9658;";
         }
     }
-
-
 });

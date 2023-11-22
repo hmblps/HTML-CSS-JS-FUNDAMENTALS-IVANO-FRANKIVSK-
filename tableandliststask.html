@@ -4,10 +4,17 @@
   <meta charset="utf-8">
   <title>02 | HTML5 Tables, Lists, Semantic Markup | Practice Task</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <style>
     body {
-      background-color: black;
+      height: 100vh;
+      margin: 0;
+      background-color: #202020;
       color: white;
+    }
+
+    main {
+      margin-top: 80px;
     }
 
     .white-text {
@@ -17,58 +24,155 @@
     table, th, td {
       border-collapse: collapse;
       border: 2px solid white;
-    }
-    
-    table {
-      width: 100%; 
-      margin: auto; 
+      color: black; /* Change text color to black */
     }
 
-    header {
-      text-align: center;
-      font-size: 1.3em;
-      font-family: 'Impact', fantasy;
-      color: white;
-    }  
-    h2 {
-      text-align: center;
+    table {
+      width: 75%;
+      margin: auto;
     }
-    h1 {
+
+    header, h1, h2 {
       text-align: center;
+      font-size: 25px;
     }
+
     ul, ol {
       display: inline-block;
       text-align: center;
     }
-    section {
-  text-align: center;
-}
+
+    .section {
+      text-align: center;
+      background: black; /* Change to black */
+      border: 4.5px inset #6a5acd;
+      border-radius: 8px;
+      padding: 10px;
+      margin: 10px;
+    }
+
     @media only screen and (max-width: 600px) {
       table, th, td {
         font-size: 12px;
       }
     }
+
+    #background-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(65%);
+    }
+
+    .navbar-custom {
+      background-color: rgba(248, 249, 250, 0.3);
+      color: white;
+      width: 100%;
+      margin-left: 0;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+      padding: 10px;
+      height: 50px;
+    }
+
+    .ulcolor {
+      background-color: rgba(248, 249, 250, 0);
+      color: white;
+      display: flex;
+      flex-direction: row;
+      gap: 25px;
+      margin-top: 15px;
+    }
+
+    .ulcolor .nav-item:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    .ulcolor {
+      margin-left: auto;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: white;
+    }
+
+    .nav-link.text-end {
+      font-size: 14px;
+    }
+
+    .navbar-nav .nav-link {
+      font-size: 16px;
+    }
+
+    main {
+      padding-top: 70px;
+    }
+
+    header, section, footer {
+      padding: 20px;
+    }
   </style>
 </head>
 <body>
-  <main>
-    <section>
-     <h1>HTML table following the <a href="https://softserve.academy/mod/resource/view.php?id=2518" target="_blank" style="color: blue; text-decoration: none;">PowerPoint's</a> structure.</a href></h1>
+
+<video id="background-video" autoplay muted loop playsinline>
+  <source src="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/indexasdasda.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<nav class="navbar navbar-expand-lg navbar-custom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">MY HOMEWORK</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="ulcolor ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link text-end" href="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-end" href="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/helloworldtask.html">Task 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-end" href="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/tableandliststask.html">Task 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-end" href="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/srccanvassvgformstask/3rdtask1stpage.html">Task 3</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-end" href="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/srccanvassvgformstask/4thtask1stpage.html">Task 4</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-end" href="https://hmblps.github.io/HTML-CSS-JS-FUNDAMENTALS-IVANO-FRANKIVSK-/5thtaskcalc.html">Task 5</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <section>
+    <h1>HTML table following the <a href="https://softserve.academy/mod/resource/view.php?id=2518" target="_blank" style="color: blue; text-decoration: none;">PowerPoint's</a> structure / Tabel HTML care urmează structura PowerPoint:</h1>
+
+    <div class="section">
       <table width="100%">
-        <caption><big><span class="white-text">Updated HTML table 19.10.23</span></big></caption>
-        
-        <tr> 
+        <tr>
           <td rowspan="2">&nbsp;</td>
           <td colspan="2">&nbsp;</td>
           <td colspan="2">&nbsp;</td>
           <td>&nbsp;</td>
         </tr>
-        
         <tr>
           <td colspan="4">&nbsp;</td>
           <td>&nbsp;</td>
         </tr>
-        
         <tr>
           <td>&nbsp;</td>
           <td>&nbsp;</td>
@@ -77,70 +181,65 @@
           <td>&nbsp;</td>
           <td>&nbsp;</td>
         </tr>
-        
         <tr>
           <td rowspan="2">&nbsp;</td>
           <td>&nbsp;</td>
           <td>&nbsp;</td>
         </tr>
-        
         <tr>
           <td colspan="3" rowspan="3">&nbsp;</td>
         </tr>
         <tr>
           <td>&nbsp;</td>
         </tr>
-         <tr>
+        <tr>
           <td>&nbsp;</td>
         </tr>
       </table>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <section>
-    <h2>Random Lists</h2>
+    <h2>Random lists / Liste aleatorii:</h2>
 
-    <ul type="circle"> 
-      <li>Random stuff 1</li>
-      <li>Random stuff 2</li>
-      <li>Random stuff 3</li>
-    </ul>
-    
-    <ul type="disc"> 
-      <li>Random stuff 1</li>
-      <li>Random stuff 2</li>
-      <li>Random stuff 3</li>
-    </ul>
-    
-    <ul type="square"> 
-      <li>Random stuff 1</li>
-      <li>Random stuff 2</li>
-      <li>Random stuff 3</li>
-    </ul>
-    
-    <ul> 
-      <li>Random stuff 1</li>
-      <li>Random stuff 2</li>
-      <li>Random stuff 3</li>
-    </ul>
-    
-    <ol type="I">
-      <li>Random stuff 1</li>
-      <li>Random stuff 2</li>
-      <li>Random stuff 3</li>
-    </ol>
-    
-    <ol start="5">
-      <li>Random stuff 1</li>
-      <li>Random stuff 2</li>
-      <li>Random stuff 3</li>
-    </ol>
-    
-    <ol reversed start="7">
-      <li>Random stuff 1</li>
-      <li>Random stuff 2</li>
-      <li>Random stuff 3</li>
-    </ol>
+    <div class="section">
+      <ul type="circle">
+        <li>Random stuff 1</li>
+        <li>Random stuff 2</li>
+        <li>Random stuff 3</li>
+      </ul>
+      <ul type="disc">
+        <li>Random stuff 1</li>
+        <li>Random stuff 2</li>
+        <li>Random stuff 3</li>
+      </ul>
+      <ul type="square">
+        <li>Random stuff 1</li>
+        <li>Random stuff 2</li>
+        <li>Random stuff 3</li>
+      </ul>
+      <ul>
+        <li>Random stuff 1</li>
+        <li>Random stuff 2</li>
+        <li>Random stuff 3</li>
+      </ul>
+      <ol type="I">
+        <li>Random stuff 1</li>
+        <li>Random stuff 2</li>
+        <li>Random stuff 3</li>
+      </ol>
+      <ol start="5">
+        <li>Random stuff 1</li>
+        <li>Random stuff 2</li>
+        <li>Random stuff 3</li>
+      </ol>
+      <ol reversed start="7">
+        <li>Random stuff 1</li>
+        <li>Random stuff 2</li>
+        <li>Random stuff 3</li>
+      </ol>
+    </div>
   </section>
+</main>
 </body>
 </html>

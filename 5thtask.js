@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let resultField = document.getElementById("result");
 
         // Set the placeholder to show chosen characters
-        resultField.placeholder = `${a} ${actionValue} ${b}`;
+        resultField.placeholder = `What is result of ${a} ${actionValue} ${b}?`;
     }
 
     // Function to handle the "Verify" button click
@@ -49,8 +49,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let userAnswer = document.getElementById("result").value.trim();
 
+        // if (Math.abs(userAnswer-rightAnswer)< 0.01) {
+            // alert("YOU ARE RIGHT")
+        
+
+
         // Display appropriate message based on user's answer
-        if (userAnswer == rightAnswer) {
+        if (Math.abs(userAnswer-rightAnswer)< 0.01) { 
+            // if (userAsnwer==rightAnswer) { 
             document.getElementById("success").style.display="flex";
             setTimeout(closePopup, 1500);
         } else {
